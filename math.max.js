@@ -1,4 +1,4 @@
-const perfTestAmount = 1000000000;
+const perfTestAmount = 10000000;
 function perfTestMax() {
   const n = "math";
   console.time(n);
