@@ -20,8 +20,8 @@ function perfTestMaxIf() {
   }
   console.timeEnd(n);
 }
-function perfTestMaxQ() {
-  const n = "qst";
+function perfTernary() {
+  const n = "ternary";
   console.time(n);
   let m = 0;
   let l = perfTestAmount;
@@ -31,6 +31,19 @@ function perfTestMaxQ() {
   }
   console.timeEnd(n);
 }
+function perfTestLogicalAnd() {
+  const n = "logical_and";
+  console.time(n);
+  let m = 0;
+  let l = perfTestAmount;
+  while (l--) {
+    const r = Math.random();
+    m = m < r && r;
+  }
+  console.timeEnd(n);
+}
+
 perfTestMaxIf();
-perfTestMaxQ();
+perfTernary();
 perfTestMax();
+perfTestLogicalAnd();
